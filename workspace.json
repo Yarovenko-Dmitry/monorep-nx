@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "react-native-mob": "apps/react-native-mob",
+    "react-native-mob-e2e": "apps/react-native-mob-e2e",
+    "react-web": "apps/react-web",
+    "react-web-e2e": "apps/react-web-e2e"
+  }
+}
