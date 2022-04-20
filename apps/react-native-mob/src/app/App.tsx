@@ -13,7 +13,7 @@ export const App = () => {
         Welcome ReactNativeMob 👋
       </Text>
       <Text style={[styles.textLg]} >
-        TEST 888-2-2--2-2-2-2-88👋
+        TEST 888-==========-88👋
       </Text>
     </>
   );

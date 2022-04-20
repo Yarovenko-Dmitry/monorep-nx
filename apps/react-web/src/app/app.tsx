@@ -1,15 +1,12 @@
-import {UserList} from './components/UserList'
-import {TodoList} from './components/TodoList'
+import {Header} from './components/header/header'
+import {Footer} from './components/footer/footer'
 
-
-export function App() {
-  return (
-    <div>
-      <UserList />
-      <hr />
-      <TodoList />
-    </div>
-  )
-}
-
-export default App
+export const App = ({ children }: any) => (
+  <>
+    <Header />
+    <main>
+      {children}
+    </main>
+    <Footer />
+  </>
+)
