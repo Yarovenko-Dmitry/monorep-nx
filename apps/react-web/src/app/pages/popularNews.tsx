@@ -1,17 +1,17 @@
 import {useEffect} from 'react'
-import {useSelector, useDispatch} from 'react-redux'
+
 import {News} from '../components/news/news'
-import {GET_POPULAR_NEWS} from '../redux/constants'
+import {getPopularNews} from '../redux/actions/actionCreator'
+import {useAppDispatch, useAppSelector} from '../hooks/redux'
+
 
 export const PopularNews = () => {
-  // @ts-ignore note
-  const {popularNews} = useSelector(store => store?.news || {})
-  // @ts-ignore note
-  const {popularNewsError} = useSelector(store => store?.errors || {})
-  const dispatch = useDispatch()
+  const {popularNews} = useAppSelector(store => store.reducer.newsList)
+  const {popularNewsError} = useAppSelector(store => store.reducer.errors)
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
-    dispatch({type: GET_POPULAR_NEWS})
+    dispatch(getPopularNews())
   }, [dispatch])
 
   return (

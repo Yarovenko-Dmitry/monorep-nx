@@ -2,12 +2,17 @@ import {NavLink} from 'react-router-dom'
 
 import './header.css'
 
-const navigation = [
+type NavigationItemType = {
+  id: number
+  title: string
+  path: string
+}
+
+const navigation: NavigationItemType[] = [
   {id: 1, title: 'Home', path: '/'},
   {id: 2, title: 'Latest News', path: '/latest-news'},
   {id: 3, title: 'Popular News', path: '/popular-news'},
 ]
-
 
 export const Header = () => (
   <header>
@@ -17,9 +22,8 @@ export const Header = () => (
           <NavLink
             key = {id}
             to = {path}
-            // @ts-ignore note
-            // exact = {true}
-          >{title}
+          >
+            {title}
           </NavLink>
         ))}
       </div>

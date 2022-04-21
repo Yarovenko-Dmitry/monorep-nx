@@ -1,14 +1,13 @@
 import {
-  SET_LATEST_NEWS,
-  SET_POPULAR_NEWS,
+  GET_LATEST_NEWS,
+  GET_POPULAR_NEWS,
 } from '../constants'
 
-export const setLatestNews = (payload: any) => ({
-  type: SET_LATEST_NEWS,
-  payload,
+
+export const getLatestNews = () => ({
+  type: GET_LATEST_NEWS
 })
 
-export const setPopularNews = (payload: any) => ({
-  type: SET_POPULAR_NEWS,
-  payload,
+export const getPopularNews = () => ({
+  type: GET_POPULAR_NEWS
 })

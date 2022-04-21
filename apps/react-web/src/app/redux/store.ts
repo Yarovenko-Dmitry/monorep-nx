@@ -1,29 +1,26 @@
-import {createStore, compose, applyMiddleware} from 'redux'
 import createSagaMiddleware from 'redux-saga'
+import {configureStore} from '@reduxjs/toolkit'
 
-import {reducer} from './reducers'
 import rootSaga from './sagas'
+import {rootReducer} from './reducers'
+
 
 const sagaMiddleware = createSagaMiddleware()
 
-const composeEnhancers =
-  typeof window === 'object' &&
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
-: compose
-
-const configureStore = (preloadedState: { [x: string]: any } | undefined) => createStore(
-  reducer,
-  preloadedState,
-  composeEnhancers(applyMiddleware(sagaMiddleware)),
-)
-
-const store = configureStore({})
+export const store = configureStore({
+  reducer: {
+    reducer: rootReducer,
+  },
+  middleware: (getDefaultMiddleware: any) => getDefaultMiddleware({
+    serializableCheck: false,
+    thunk: false,
+  })
+    .concat(sagaMiddleware)
+})
 
 sagaMiddleware.run(rootSaga)
 
-export default store
+
+export type RootStateType = ReturnType<typeof store.getState>
+export type AppDispatchType = typeof store.dispatch
+

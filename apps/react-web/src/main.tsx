@@ -3,11 +3,12 @@ import {Provider} from 'react-redux'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 import {App} from './app/app'
-import store from './app/redux/store'
+import {store} from './app/redux/store'
 import {Home} from './app/pages/home'
 import {LatestNews} from './app/pages/latestNews'
 import {PopularNews} from './app/pages/popularNews'
 import {NotfoundPage} from './app/pages/notfoundPage'
+
 
 const root = ReactDOMClient.createRoot(
   document.getElementById('root') as HTMLElement,

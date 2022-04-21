@@ -1,7 +1,16 @@
-import './news.css'
+import React from 'react'
 
-// @ts-ignore note
-export const News = ({news, error, title}) => {
+import './news.css'
+import {SingleNewsType} from '../../types/NewsType'
+
+
+type PropsType = {
+  news?: SingleNewsType[]
+  error?: string
+  title?: string
+}
+
+export const News: React.FC<PropsType> = ({news, error, title}) => {
   if (!news || news.length === 0) {
     return error ? <h2>{error}</h2> : null
   }
@@ -10,15 +19,17 @@ export const News = ({news, error, title}) => {
     <div>
       <h2>{`${title}:`}</h2>
       <ul className = 'news-list'>
-        {/*@ts-ignore note*/}
         {news.map(({objectID, url, title, points, num_comments, created_at, author}) => (
           <li
             key = {objectID}
-            className = 'news'>
+            className = 'news'
+          >
             <div className = 'description'>
               <a
                 href = {url}
-                className = 'news-title'>{title || 'No title'}
+                className = 'news-title'
+              >
+                {title || 'No title'}
               </a>
               <span className = 'text'>{`${points || 0} points`}</span>
               <span className = 'comments'>{`${num_comments || 0} comments`}</span>
