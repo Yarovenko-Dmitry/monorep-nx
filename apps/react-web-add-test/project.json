@@ -1,0 +1,73 @@
+{
+  "root": "apps/react-web-add-test",
+  "sourceRoot": "apps/react-web-add-test/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/react-web-add-test",
+        "index": "apps/react-web-add-test/src/index.html",
+        "baseHref": "/",
+        "main": "apps/react-web-add-test/src/main.tsx",
+        "polyfills": "apps/react-web-add-test/src/polyfills.ts",
+        "tsConfig": "apps/react-web-add-test/tsconfig.app.json",
+        "assets": [
+          "apps/react-web-add-test/src/favicon.ico",
+          "apps/react-web-add-test/src/assets"
+        ],
+        "styles": ["apps/react-web-add-test/src/styles.css"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/react-web-add-test/src/environments/environment.ts",
+              "with": "apps/react-web-add-test/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "react-web-add-test:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "react-web-add-test:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/react-web-add-test/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/react-web-add-test"],
+      "options": {
+        "jestConfig": "apps/react-web-add-test/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -3,16 +3,16 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve",
+    "start-web": "nx serve",
     "build": "nx build",
     "test": "nx test",
     "android": "nx run-android react-native-mob",
-    "ios": "nx run-ios react-native-mob"
+    "ios": "nx run-ios react-native-mob",
+    "start-web-add-test": "nx serve react-web-add-test"
   },
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
-    "@types/react-router-dom": "^5.3.3",
     "axios": "^0.26.1",
     "core-js": "^3.6.5",
     "react": "18.0.0",
@@ -52,6 +52,7 @@
     "@types/react-dom": "18.0.0",
     "@types/react-native": "0.67.3",
     "@types/react-redux": "^7.1.24",
+    "@types/react-router-dom": "5.3.3",
     "@types/redux-saga": "^0.10.5",
     "@typescript-eslint/eslint-plugin": "~5.18.0",
     "@typescript-eslint/parser": "~5.18.0",
