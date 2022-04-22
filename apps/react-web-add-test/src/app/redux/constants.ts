@@ -1,0 +1,2 @@
+export const GET_LATEST_NEWS = 'GET_LATEST_NEWS'
+export const GET_POPULAR_NEWS = 'GET_POPULAR_NEWS'

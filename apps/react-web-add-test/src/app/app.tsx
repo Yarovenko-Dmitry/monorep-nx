@@ -1,13 +1,15 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import NxWelcome from './nx-welcome';
+import {Header} from './components/header/header'
+import {Footer} from './components/footer/footer'
 
-export function App() {
-  return (
-    <>
-      <NxWelcome title="react-web-add-test"/>
-      <div/>
-    </>
-  );
-}
 
-export default App;
+export const App = ({children}: any) => (
+  <>
+    <Header />
+
+    <main>
+      {children}
+    </main>
+
+    <Footer />
+  </>
+)

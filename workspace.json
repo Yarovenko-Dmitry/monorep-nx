@@ -6,6 +6,7 @@
     "react-web": "apps/react-web",
     "react-web-add-test": "apps/react-web-add-test",
     "react-web-add-test-e2e": "apps/react-web-add-test-e2e",
-    "react-web-e2e": "apps/react-web-e2e"
+    "react-web-e2e": "apps/react-web-e2e",
+    "types": "libs/types"
   }
 }

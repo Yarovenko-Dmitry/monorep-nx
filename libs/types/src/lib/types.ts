@@ -38,3 +38,8 @@ export type SingleNewsType = {
     }
   }
 }
+
+export type ErrorsStateType = {
+  latestNewsError: string
+  popularNewsError: string
+}
