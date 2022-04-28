@@ -1,0 +1,23 @@
+{
+  "root": "libs/redux/saga",
+  "sourceRoot": "libs/redux/saga/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/redux/saga/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/redux/saga"],
+      "options": {
+        "jestConfig": "libs/redux/saga/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

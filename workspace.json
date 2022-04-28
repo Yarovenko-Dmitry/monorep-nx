@@ -1,12 +1,21 @@
 {
   "version": 2,
   "projects": {
+    "actions": "libs/redux/actions",
+    "api": "libs/api",
+    "hooks": "libs/hooks",
+    "pages-web": "libs/pages-web",
     "react-native-mob": "apps/react-native-mob",
     "react-native-mob-e2e": "apps/react-native-mob-e2e",
     "react-web": "apps/react-web",
     "react-web-add-test": "apps/react-web-add-test",
     "react-web-add-test-e2e": "apps/react-web-add-test-e2e",
     "react-web-e2e": "apps/react-web-e2e",
-    "types": "libs/types"
+    "reducers": "libs/redux/reducers",
+    "redux": "libs/redux",
+    "constants": "libs/redux/constants",
+    "saga": "libs/redux/saga",
+    "types": "libs/types",
+    "ui-web": "libs/ui-web"
   }
 }

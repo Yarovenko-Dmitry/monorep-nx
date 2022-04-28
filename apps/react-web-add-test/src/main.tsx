@@ -2,12 +2,10 @@ import * as ReactDOMClient from 'react-dom/client'
 import {Provider} from 'react-redux'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
+import {store} from '@4-mono-all/redux'
+import {Home, LatestNews, NotfoundPage, PopularNews} from '@4-mono-all/pages-web'
+
 import {App} from './app/app'
-import {store} from './app/redux/store'
-import {Home} from './app/pages/home'
-import {LatestNews} from './app/pages/latestNews'
-import {PopularNews} from './app/pages/popularNews'
-import {NotfoundPage} from './app/pages/notfoundPage'
 
 
 const root = ReactDOMClient.createRoot(

@@ -1,0 +1,23 @@
+{
+  "root": "libs/redux/constants",
+  "sourceRoot": "libs/redux/constants/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/redux/constants/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/redux/constants"],
+      "options": {
+        "jestConfig": "libs/redux/constants/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

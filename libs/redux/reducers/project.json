@@ -1,0 +1,23 @@
+{
+  "root": "libs/redux/reducers",
+  "sourceRoot": "libs/redux/reducers/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/redux/reducers/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/redux/reducers"],
+      "options": {
+        "jestConfig": "libs/redux/reducers/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

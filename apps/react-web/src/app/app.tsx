@@ -1,5 +1,4 @@
-import {Header} from './components/header/header'
-import {Footer} from './components/footer/footer'
+import {Footer, Header} from '@4-mono-all/ui-web'
 
 
 export const App = ({children}: any) => (

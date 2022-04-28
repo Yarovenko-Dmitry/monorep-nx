@@ -1,0 +1,23 @@
+{
+  "root": "libs/redux/actions",
+  "sourceRoot": "libs/redux/actions/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/redux/actions/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/redux/actions"],
+      "options": {
+        "jestConfig": "libs/redux/actions/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
