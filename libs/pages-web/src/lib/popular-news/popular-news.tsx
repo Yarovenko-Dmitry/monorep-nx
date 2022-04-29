@@ -2,7 +2,7 @@ import {useEffect} from 'react'
 
 import {News} from '@4-mono-all/ui-web'
 import {useAppDispatch, useAppSelector} from '@4-mono-all/hooks'
-import {getPopularNews} from '@4-mono-all/redux/actions'
+import { getPopularNewsAC} from '@4-mono-all/redux/actions'
 
 
 export const PopularNews = () => {
@@ -11,7 +11,7 @@ export const PopularNews = () => {
   const dispatch = useAppDispatch()
 
   useEffect(() => {
-    dispatch(getPopularNews())
+    dispatch(getPopularNewsAC())
   }, [dispatch])
 
   return (
