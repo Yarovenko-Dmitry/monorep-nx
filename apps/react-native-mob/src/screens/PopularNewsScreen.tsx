@@ -1,27 +1,36 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {Text, View} from 'react-native'
+
+import {useAppDispatch, useAppSelector} from '@4-mono-all/hooks'
+import {getPopularNewsAC} from '@4-mono-all/redux/actions'
 
 
 export const PopularNewsScreen = () => {
-/*  const {latestNews} = useAppSelector((store) => store.reducer.newsList)
-  const {latestNewsError} = useAppSelector(store => store.reducer.errors)
+  const {popularNews} = useAppSelector(store => store.reducer.newsList)
+  const {popularNewsError} = useAppSelector(store => store.reducer.errors)
   const dispatch = useAppDispatch()
 
   useEffect(() => {
-    dispatch(getLatestNews())
-  }, [dispatch])*/
+    dispatch(getPopularNewsAC())
+  }, [dispatch])
 
+  if (!popularNews || popularNews.length === 0) {
+    return popularNewsError ? <View><Text>{popularNewsError}</Text></View> : null
+  }
 
   return (
     <View>
       <Text>
         PopularNews
       </Text>
-     {/* <News
-        news = {latestNews}
-        error = {latestNewsError}
-        title = 'Latest News'
-      />*/}
+
+      {popularNews.map(({title}, index) => (
+        <View key = {index}>
+          <Text>
+            {title}
+          </Text>
+        </View>
+      ))}
     </View>
   )
 }
