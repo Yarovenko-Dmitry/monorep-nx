@@ -1,6 +1,6 @@
 import {createSlice, PayloadAction, SliceCaseReducers} from '@reduxjs/toolkit'
 
-import {ErrorsStateType} from '@4-mono-all/types'
+import {ErrorsStateType} from '@monorepo-nx/types'
 
 
 const initialState: ErrorsStateType = {

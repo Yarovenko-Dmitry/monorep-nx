@@ -1,4 +1,4 @@
-import {GET_LATEST_NEWS, GET_POPULAR_NEWS} from '@4-mono-all/redux/constants'
+import {GET_LATEST_NEWS, GET_POPULAR_NEWS} from '@monorepo-nx/redux/constants'
 
 
 export const getLatestNewsAC = () => ({

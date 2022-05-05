@@ -1,5 +1,5 @@
 {
-  "npmScope": "4-mono-all",
+  "npmScope": "monorepo-nx",
   "affected": {
     "defaultBase": "main"
   },

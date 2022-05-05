@@ -89,7 +89,7 @@ buck-out/
 ## Bundle artifact
 *.jsbundle
 
-## CocoaPods
+# Ruby / CocoaPods
 **/ios/Pods/
-
+/vendor/bundle/
 apps/react-native-mob-e2e/artifacts

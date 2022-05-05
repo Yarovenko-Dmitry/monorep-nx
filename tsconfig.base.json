@@ -15,16 +15,16 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@4-mono-all/api": ["libs/api/src/index.ts"],
-      "@4-mono-all/hooks": ["libs/hooks/src/index.ts"],
-      "@4-mono-all/pages-web": ["libs/pages-web/src/index.ts"],
-      "@4-mono-all/redux": ["libs/redux/src/index.ts"],
-      "@4-mono-all/redux/actions": ["libs/redux/actions/src/index.ts"],
-      "@4-mono-all/redux/constants": ["libs/redux/constants/src/index.ts"],
-      "@4-mono-all/redux/reducers": ["libs/redux/reducers/src/index.ts"],
-      "@4-mono-all/redux/saga": ["libs/redux/saga/src/index.ts"],
-      "@4-mono-all/types": ["libs/types/src/index.ts"],
-      "@4-mono-all/ui-web": ["libs/ui-web/src/index.ts"]
+      "@monorepo-nx/api": ["libs/api/src/index.ts"],
+      "@monorepo-nx/hooks": ["libs/hooks/src/index.ts"],
+      "@monorepo-nx/pages-web": ["libs/pages-web/src/index.ts"],
+      "@monorepo-nx/redux": ["libs/redux/src/index.ts"],
+      "@monorepo-nx/redux/actions": ["libs/redux/actions/src/index.ts"],
+      "@monorepo-nx/redux/constants": ["libs/redux/constants/src/index.ts"],
+      "@monorepo-nx/redux/reducers": ["libs/redux/reducers/src/index.ts"],
+      "@monorepo-nx/redux/saga": ["libs/redux/saga/src/index.ts"],
+      "@monorepo-nx/types": ["libs/types/src/index.ts"],
+      "@monorepo-nx/ui-web": ["libs/ui-web/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

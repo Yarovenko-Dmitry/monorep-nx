@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react'
 import {Text, View} from 'react-native'
 
-import {useAppDispatch, useAppSelector} from '@4-mono-all/hooks'
-import {getPopularNewsAC} from '@4-mono-all/redux/actions'
+import {useAppDispatch, useAppSelector} from '@monorepo-nx/hooks'
+import {getPopularNewsAC} from '@monorepo-nx/redux/actions'
 
 
 export const PopularNewsScreen = () => {

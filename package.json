@@ -1,5 +1,5 @@
 {
-  "name": "4-mono-all",
+  "name": "monorepo-nx",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -8,7 +8,7 @@
     "test": "nx test",
     "android": "nx run-android react-native-mob",
     "ios": "nx run-ios react-native-mob",
-    "start-web-add-test": "nx serve react-web-add-test"
+    "start-web-add-test": "nx serve react-web-add-test --port 7878"
   },
   "private": true,
   "dependencies": {
@@ -54,7 +54,7 @@
     "@testing-library/react-native": "9.1.0",
     "@types/jest": "27.0.2",
     "@types/node": "16.11.7",
-    "@types/react": "^17.0.41",
+    "@types/react": "^17.0.2",
     "@types/react-dom": "17.0.2",
     "@types/react-native": "0.67.3",
     "@types/react-redux": "^7.1.24",
@@ -65,7 +65,7 @@
     "babel-jest": "27.2.3",
     "cypress": "^9.1.0",
     "detox": "19.5.7",
-    "eslint": "~8.12.0",
+    "eslint": "^7.32.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
     "eslint-plugin-import": "2.26.0",
@@ -76,7 +76,7 @@
     "jest-circus": "27.2.3",
     "jest-react-native": "17.0.2",
     "metro": "0.70.0",
-    "metro-react-native-babel-preset": "0.70.0",
+    "metro-react-native-babel-preset": "^0.67.0",
     "metro-resolver": "0.70.0",
     "nx": "13.10.2",
     "prettier": "^2.5.1",

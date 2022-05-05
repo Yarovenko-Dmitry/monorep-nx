@@ -1,8 +1,8 @@
 import {useEffect} from 'react'
 
-import {News} from '@4-mono-all/ui-web'
-import {useAppDispatch, useAppSelector} from '@4-mono-all/hooks'
-import { getPopularNewsAC} from '@4-mono-all/redux/actions'
+import {News} from '@monorepo-nx/ui-web'
+import {useAppDispatch, useAppSelector} from '@monorepo-nx/hooks'
+import { getPopularNewsAC} from '@monorepo-nx/redux/actions'
 
 
 export const PopularNews = () => {

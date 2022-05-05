@@ -1,8 +1,8 @@
 import createSagaMiddleware from 'redux-saga'
 import {configureStore} from '@reduxjs/toolkit'
 
-import {rootSaga} from '@4-mono-all/redux/saga'
-import {rootReducer} from '@4-mono-all/redux/reducers'
+import {rootSaga} from '@monorepo-nx/redux/saga'
+import {rootReducer} from '@monorepo-nx/redux/reducers'
 
 
 const sagaMiddleware = createSagaMiddleware()
@@ -23,4 +23,3 @@ sagaMiddleware.run(rootSaga)
 
 export type RootStateType = ReturnType<typeof store.getState>
 export type AppDispatchType = typeof store.dispatch
-

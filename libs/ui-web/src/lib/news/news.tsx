@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './news.css'
-import {SingleNewsType} from '@4-mono-all/types'
+import {SingleNewsType} from '@monorepo-nx/types'
 
 
 type PropsType = {

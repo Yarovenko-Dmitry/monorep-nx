@@ -1,5 +1,5 @@
 import {TypedUseSelectorHook, useDispatch, useSelector} from 'react-redux'
-import {AppDispatchType, RootStateType} from '@4-mono-all/redux'
+import {AppDispatchType, RootStateType} from '@monorepo-nx/redux'
 
 
 export const useAppSelector: TypedUseSelectorHook<RootStateType> = useSelector

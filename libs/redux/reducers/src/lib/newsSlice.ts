@@ -1,6 +1,6 @@
 import {createSlice, PayloadAction, SliceCaseReducers} from '@reduxjs/toolkit'
 
-import {NewsStateType, SingleNewsType} from '@4-mono-all/types'
+import {NewsStateType, SingleNewsType} from '@monorepo-nx/types'
 
 
 const initialState: NewsStateType = {

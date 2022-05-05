@@ -1,4 +1,4 @@
-import {Footer, Header} from '@4-mono-all/ui-web'
+import {Footer, Header} from '@monorepo-nx/ui-web'
 
 
 export const App = ({children}: any) => (

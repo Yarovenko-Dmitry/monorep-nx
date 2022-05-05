@@ -1,8 +1,8 @@
 import {all, call, fork, put, takeEvery} from 'redux-saga/effects'
 
-import {getLatestNews, getPopularNews} from '@4-mono-all/api'
-import {GET_LATEST_NEWS, GET_POPULAR_NEWS} from '@4-mono-all/redux/constants'
-import {setLatestNews, setLatestNewsError, setPopularNews, setPopularNewsError} from '@4-mono-all/redux/reducers'
+import {getLatestNews, getPopularNews} from '@monorepo-nx/api'
+import {GET_LATEST_NEWS, GET_POPULAR_NEWS} from '@monorepo-nx/redux/constants'
+import {setLatestNews, setLatestNewsError, setPopularNews, setPopularNewsError} from '@monorepo-nx/redux/reducers'
 
 
 export function* handleLatestNews() {
@@ -37,4 +37,3 @@ export function* rootSaga() {
     fork(watchLatestSaga),
   ])
 }
-

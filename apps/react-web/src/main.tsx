@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
-import {store} from '@4-mono-all/redux'
-import {Home, LatestNews, NotfoundPage, PopularNews} from '@4-mono-all/pages-web'
+import {store} from '@monorepo-nx/redux'
+import {Home, LatestNews, NotfoundPage, PopularNews} from '@monorepo-nx/pages-web'
 
 import {App} from './app/app'
 

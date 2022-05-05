@@ -4,7 +4,7 @@ import {Image, StyleSheet} from 'react-native'
 import {NavigationContainer} from '@react-navigation/native'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 
-import {store} from '@4-mono-all/redux'
+import {store} from '@monorepo-nx/redux'
 
 import {HomeScreen} from './screens/HomeScreen'
 import {LatestNewsScreen} from './screens/LatestNewsScreen'
@@ -14,7 +14,6 @@ import {PopularNewsScreen} from './screens/PopularNewsScreen'
 const Tab = createBottomTabNavigator()
 
 const App = () => {
-  // console.log(' store :', store)
   return (
     <Provider store = {store}>
       <NavigationContainer>
