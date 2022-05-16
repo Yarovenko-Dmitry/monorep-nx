@@ -1,5 +1,7 @@
 import {GetFilmsType, GetPathType, FilmType, ResultFilmType} from "@monorepo-nx/types";
 import {GENRES} from "@monorepo-nx/data-constants";
+// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
+import { NX_API_KEY_APP } from '../../../../apps/react-native-mob/envConfig';
 
 export const getLatestNews = async (searchQuery: string) => {
   const res = await fetch(`https://hn.algolia.com/api/v1/search?query=${searchQuery}&hitsPerPage=10&page=0`)
@@ -15,8 +17,8 @@ const getImagePath: GetPathType = path =>
   `https://image.tmdb.org/t/p/w440_and_h660_face${path}`;
 const getBackdropPath: GetPathType = path =>
   `https://image.tmdb.org/t/p/w370_and_h556_multi_faces${path}`;
-const API_KEY = 'stub'
-const API_URL = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&sort_by=popularity.desc`;
+
+const API_URL = `https://api.themoviedb.org/3/discover/movie?api_key=${NX_API_KEY_APP}&sort_by=popularity.desc`;
 
 export const getFilms: GetFilmsType = async () => {
   const { results } = await fetch(API_URL).then(result => result.json());
