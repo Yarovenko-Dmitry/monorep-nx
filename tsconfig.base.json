@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@monorepo-nx/api": ["libs/api/src/index.ts"],
+      "@monorepo-nx/data-constants": ["libs/data-constants/src/index.ts"],
       "@monorepo-nx/hooks": ["libs/hooks/src/index.ts"],
       "@monorepo-nx/pages-web": ["libs/pages-web/src/index.ts"],
       "@monorepo-nx/redux": ["libs/redux/src/index.ts"],

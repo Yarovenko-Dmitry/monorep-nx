@@ -1,5 +1,5 @@
-{
-  "extends": ["plugin:@nrwl/nx/react", "../../.eslintrc.json"],
+module.exports = {
+  "extends": ["../../.eslintrc.js"],
   "ignorePatterns": ["!**/*"],
   "overrides": [
     {

@@ -3,6 +3,8 @@
   "projects": {
     "actions": "libs/redux/actions",
     "api": "libs/api",
+    "constants": "libs/redux/constants",
+    "data-constants": "libs/data-constants",
     "hooks": "libs/hooks",
     "pages-web": "libs/pages-web",
     "react-native-mob": "apps/react-native-mob",
@@ -13,7 +15,6 @@
     "react-web-e2e": "apps/react-web-e2e",
     "reducers": "libs/redux/reducers",
     "redux": "libs/redux",
-    "constants": "libs/redux/constants",
     "saga": "libs/redux/saga",
     "types": "libs/types",
     "ui-web": "libs/ui-web"

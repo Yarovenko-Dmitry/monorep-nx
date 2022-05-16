@@ -93,3 +93,8 @@ buck-out/
 **/ios/Pods/
 /vendor/bundle/
 apps/react-native-mob-e2e/artifacts
+
+# .env
+.local.env
+.env.local
+.env

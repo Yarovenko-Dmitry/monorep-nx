@@ -19,6 +19,8 @@
     "@react-navigation/bottom-tabs": "*",
     "redux-saga": "*",
     "@reduxjs/toolkit": "*",
-    "redux": "*"
+    "redux": "*",
+    "react-native-linear-gradient": "*",
+    "react-native-ratings": "*"
   }
 }
