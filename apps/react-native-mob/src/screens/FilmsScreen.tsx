@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useEffect, useRef } from 'react';
 
-import { getMovies } from '@monorepo-nx/api';
 import {
   EMPTY_ITEM_SIZE,
   isIos,
   ITEM_SIZE,
   SPACING,
 } from '@monorepo-nx/data-constants';
-import { FetchDataType, MovieType } from '@monorepo-nx/types';
+import { useAppDispatch, useAppSelector } from '@monorepo-nx/hooks';
+import { getFilmsAC } from '@monorepo-nx/redux/actions';
 import {
   Animated,
   Image,
@@ -21,42 +21,37 @@ import {
 import { Backdrop } from '../components/films/Backdrop';
 import { Genres } from '../components/films/Genres';
 import { Loading } from '../components/films/Loading';
-
 import { Rating } from '../components/films/Rating';
 
 export const FilmsScreen: FC = () => {
-  const [movies, setMovies] = useState<MovieType[]>([]);
+  const { films } = useAppSelector(store => store.reducer.films);
+  const { filmsError } = useAppSelector(store => store.reducer.errors);
+  const dispatch = useAppDispatch();
   const scrollX = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    let isMounted = true;
+    dispatch(getFilmsAC());
+  }, [dispatch]);
 
-    if (!movies.length && isMounted) {
-      fetchData();
-    }
+  if (filmsError) {
+    return (
+      <View>
+        <Text>{filmsError}</Text>
+      </View>
+    );
+  }
 
-    return () => {
-      isMounted = false;
-    };
-  }, [movies]);
-
-  const fetchData: FetchDataType = async () => {
-    const moviesList = await getMovies();
-
-    setMovies([{ key: 'empty-left' }, ...moviesList, { key: 'empty-right' }]);
-  };
-
-  if (!movies.length) {
+  if (!films.length) {
     return <Loading />;
   }
 
   return (
     <View style={styles.container}>
-      <Backdrop movies={movies} scrollX={scrollX} />
+      <Backdrop films={films} scrollX={scrollX} />
       <StatusBar hidden />
       <Animated.FlatList
         showsHorizontalScrollIndicator={false}
-        data={movies}
+        data={films}
         keyExtractor={item => item.key}
         horizontal
         bounces={false}

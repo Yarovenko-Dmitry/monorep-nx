@@ -12,11 +12,11 @@ import { Animated, FlatList, Image, StyleSheet, View } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
 
-export const Backdrop: FC<BackdropType> = ({ movies, scrollX }) => {
+export const Backdrop: FC<BackdropType> = ({ films, scrollX }) => {
   return (
     <View style={styles.backdrop}>
       <FlatList
-        data={movies.reverse()}
+        data={films}
         keyExtractor={item => `${item.key}-backdrop`}
         removeClippedSubviews={false}
         contentContainerStyle={{ height: BACKDROP_HEIGHT, width }}

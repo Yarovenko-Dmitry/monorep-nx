@@ -6,6 +6,7 @@ import {ErrorsStateType} from '@monorepo-nx/types'
 const initialState: ErrorsStateType = {
   latestNewsError: '',
   popularNewsError: '',
+  filmsError: '',
 }
 
 export const errorsSlice = createSlice<ErrorsStateType, SliceCaseReducers<ErrorsStateType>, string>({
@@ -18,7 +19,10 @@ export const errorsSlice = createSlice<ErrorsStateType, SliceCaseReducers<Errors
     setPopularNewsError: (state, action: PayloadAction<string>): void => {
       state.popularNewsError = action.payload
     },
+    setFilmsError: (state, action: PayloadAction<string>): void => {
+      state.filmsError = action.payload
+    },
   }
 })
 
-export const {setLatestNewsError, setPopularNewsError} = errorsSlice.actions
+export const {setLatestNewsError, setPopularNewsError, setFilmsError} = errorsSlice.actions

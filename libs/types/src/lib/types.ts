@@ -5,6 +5,10 @@ export type NewsStateType = {
   popularNews: SingleNewsType[],
 }
 
+export type FilmsStateType = {
+  films: FilmType[]
+}
+
 export type SingleNewsType = {
   created_at: string
   title: string
@@ -44,13 +48,14 @@ export type SingleNewsType = {
 export type ErrorsStateType = {
   latestNewsError: string
   popularNewsError: string
+  filmsError: string
 }
 
 export type GenresListType = {
   [key: number]: string;
 };
 
-export type MovieType = {
+export type FilmType = {
   backdrop?: string;
   description?: string;
   genres?: string[];
@@ -70,11 +75,11 @@ export type RatingType = {
 };
 
 export type BackdropType = {
-  movies: MovieType[];
+  films: FilmType[];
   scrollX: Animated.Value;
 };
 
-export type ResultType = {
+export type ResultFilmType = {
   backdrop_path: string;
   genre_ids: number[];
   id: number;
@@ -85,11 +90,8 @@ export type ResultType = {
   vote_average: number;
 };
 
-export type FetchDataType = () => void;
+export type GetPathType = (path: string) => string;
 
-export type getPathType = (path: string) => string;
-
-export type GetMoviesType = () => Promise<MovieType[]>;
+export type GetFilmsType = () => Promise<FilmType[]>;
 
 export type ActionCreatorType = () => { type: string}
-

@@ -1,4 +1,4 @@
-import {GetMoviesType, getPathType, MovieType, ResultType} from "@monorepo-nx/types";
+import {GetFilmsType, GetPathType, FilmType, ResultFilmType} from "@monorepo-nx/types";
 import {GENRES} from "@monorepo-nx/data-constants";
 
 export const getLatestNews = async (searchQuery: string) => {
@@ -11,16 +11,16 @@ export const getPopularNews = async () => {
   return await res.json()
 }
 
-const getImagePath: getPathType = path =>
+const getImagePath: GetPathType = path =>
   `https://image.tmdb.org/t/p/w440_and_h660_face${path}`;
-const getBackdropPath: getPathType = path =>
+const getBackdropPath: GetPathType = path =>
   `https://image.tmdb.org/t/p/w370_and_h556_multi_faces${path}`;
 const API_KEY = 'stub'
 const API_URL = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&sort_by=popularity.desc`;
 
-export const getMovies: GetMoviesType = async () => {
+export const getFilms: GetFilmsType = async () => {
   const { results } = await fetch(API_URL).then(result => result.json());
-  const movies: MovieType[] = results.map(
+  const films: FilmType[] = results.map(
     ({
        backdrop_path,
        genre_ids,
@@ -30,7 +30,7 @@ export const getMovies: GetMoviesType = async () => {
        poster_path,
        release_date,
        vote_average,
-     }: ResultType) => ({
+     }: ResultFilmType) => ({
       backdrop: getBackdropPath(backdrop_path),
       description: overview,
       genres: genre_ids.map((genre: number) => GENRES[genre]),
@@ -42,5 +42,5 @@ export const getMovies: GetMoviesType = async () => {
     }),
   );
 
-  return movies;
+  return films;
 };
