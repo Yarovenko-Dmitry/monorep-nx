@@ -10817,9 +10817,9 @@ raw-loader@^4.0.2:
     schema-utils "^3.0.0"
 
 react-devtools-core@^4.23.0:
-  version "4.24.4"
-  resolved "https://registry.yarnpkg.com/react-devtools-core/-/react-devtools-core-4.24.4.tgz#adaa54569f87ce7c08384d12e0b35122a755cbae"
-  integrity sha512-jbX8Yqyq4YvFEobHyXVlGaH0Cs/+EOdb3PL911bxaR5BnzbB5TE4RFHC1iOgT4vRH3VxIIrVQ7lR9vsiFFCYCA==
+  version "4.24.6"
+  resolved "https://registry.yarnpkg.com/react-devtools-core/-/react-devtools-core-4.24.6.tgz#3262114f483465179c97a49b7ada845048f4f97e"
+  integrity sha512-+6y6JAtAo1NUUxaCwCYTb13ViBpc7RjNTlj1HZRlDJmi7UYToj5+BNn8Duzz2YizzAzmRUWZkRM7OtqxnN6TnA==
   dependencies:
     shell-quote "^1.6.1"
     ws "^7"
@@ -10861,9 +10861,9 @@ react-is@^16.13.0, react-is@^16.13.1, react-is@^16.7.0, react-is@^16.8.4:
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
 react-native-codegen@*:
-  version "0.0.16"
-  resolved "https://registry.yarnpkg.com/react-native-codegen/-/react-native-codegen-0.0.16.tgz#5561ab5810df29ff7edb6bc66e0146fab78bc17d"
-  integrity sha512-fAid3BeRGhEAG0oDhgnqwj1Btdp7S6WE4oVfwbsOPHm3DmGW7Fe1lcBudPauJPiUs4t63ABK3A4LQXpPSRjaOg==
+  version "0.69.1"
+  resolved "https://registry.yarnpkg.com/react-native-codegen/-/react-native-codegen-0.69.1.tgz#3632be2f24464e6fad8dd11a25d1b6f3bc2c7d0b"
+  integrity sha512-TOZEqBarczcyYN3iZE3VpKkooOevaAzBq9n7lU0h9mQUvtRhLVyolc+a5K6cWI0e4v4K69I0MqzjPcPeFKo32Q==
   dependencies:
     "@babel/parser" "^7.14.0"
     flow-parser "^0.121.0"
