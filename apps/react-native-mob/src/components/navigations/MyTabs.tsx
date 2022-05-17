@@ -12,6 +12,8 @@ const Tab = createBottomTabNavigator();
 
 export const MyTabs: FC = () => {
   return (
+    /*TS2786: 'Tab.Navigator' cannot be used as a JSX component.
+      Type '{}' is not assignable to type 'ReactNode'. */
     // @ts-ignore
     <Tab.Navigator>
       <Tab.Screen

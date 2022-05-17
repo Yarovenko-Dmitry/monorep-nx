@@ -40,7 +40,10 @@ export const Backdrop: FC<BackdropType> = ({ films, scrollX }) => {
         }}
       />
 
-      {/* @ts-ignore */}
+      {/*TS2786: 'LinearGradient' cannot be used as a JSX component.
+      Type '{}' is not assignable to type 'ReactNode'.
+      NOTE: correct work without NX */}
+      {/* @ts-ignore  */}
       <LinearGradient
         colors={['rgba(0, 0, 0, 0)', 'white']}
         style={styles.linearGradient}
