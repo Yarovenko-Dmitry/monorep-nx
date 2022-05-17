@@ -21,6 +21,11 @@
     "@reduxjs/toolkit": "*",
     "redux": "*",
     "react-native-linear-gradient": "*",
-    "react-native-ratings": "*"
+    "react-native-ratings": "*",
+    "@testing-library/react": "*",
+    "react-router-dom": "*",
+    "react-dom": "*",
+    "core-js": "*",
+    "regenerator-runtime": "*"
   }
 }

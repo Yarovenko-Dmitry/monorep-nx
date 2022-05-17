@@ -1,7 +1,7 @@
 import {GetFilmsType, GetPathType, FilmType, ResultFilmType} from "@monorepo-nx/types";
 import {GENRES} from "@monorepo-nx/data-constants";
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
-import { NX_API_KEY_MOB } from '../../../../apps/react-native-mob/envConfig';
+// import { NX_API_KEY_MOB } from '../../../../apps/react-native-mob/envConfig';
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import {configWebData} from '../../../../apps/react-web/envConfig';
 
@@ -21,9 +21,11 @@ const getBackdropPath: GetPathType = path =>
   `https://image.tmdb.org/t/p/w370_and_h556_multi_faces${path}`;
 
 console.log(' NX_API_KEY_WEB :', configWebData.NX_API_KEY_WEB)
-console.log(' NX_API_KEY_MOB :', NX_API_KEY_MOB)
+// console.log(' NX_API_KEY_MOB :', NX_API_KEY_MOB)
 
-const API_KEY = configWebData.NX_API_KEY_WEB || NX_API_KEY_MOB
+// const API_KEY = configWebData.NX_API_KEY_WEB || NX_API_KEY_MOB
+const API_KEY = configWebData.NX_API_KEY_WEB
+console.log(' API_KEY :', API_KEY)
 
 const API_URL = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&sort_by=popularity.desc`;
 

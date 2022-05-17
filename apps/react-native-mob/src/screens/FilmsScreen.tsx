@@ -1,12 +1,6 @@
 import * as React from 'react';
 import { FC, useEffect, useRef } from 'react';
 
-import {
-  EMPTY_ITEM_SIZE,
-  isIos,
-  ITEM_SIZE,
-  SPACING,
-} from '@monorepo-nx/data-constants';
 import { useAppDispatch, useAppSelector } from '@monorepo-nx/hooks';
 import { getFilmsAC } from '@monorepo-nx/redux/actions';
 import {
@@ -22,6 +16,7 @@ import { Backdrop } from '../components/films/Backdrop';
 import { Genres } from '../components/films/Genres';
 import { Loading } from '../components/films/Loading';
 import { Rating } from '../components/films/Rating';
+import { EMPTY_ITEM_SIZE, isIos, ITEM_SIZE, SPACING } from '../data-constants';
 
 export const FilmsScreen: FC = () => {
   const { films } = useAppSelector(store => store.reducer.films);

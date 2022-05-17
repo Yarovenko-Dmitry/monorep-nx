@@ -1,5 +1,3 @@
-import {Animated} from 'react-native';
-
 export type NewsStateType = {
   latestNews: SingleNewsType[],
   popularNews: SingleNewsType[],
@@ -72,11 +70,6 @@ export type GenresType = {
 
 export type RatingType = {
   rating: number | undefined;
-};
-
-export type BackdropType = {
-  films: FilmType[];
-  scrollX: Animated.Value;
 };
 
 export type ResultFilmType = {

@@ -1,16 +1,18 @@
 import * as React from 'react';
 import { FC } from 'react';
 
+import { Animated, FlatList, Image, StyleSheet, View } from 'react-native';
+
+import LinearGradient from 'react-native-linear-gradient';
+
 import {
   BACKDROP_HEIGHT,
   height,
   ITEM_SIZE,
   width,
-} from '@monorepo-nx/data-constants';
-import { BackdropType } from '@monorepo-nx/types';
-import { Animated, FlatList, Image, StyleSheet, View } from 'react-native';
+} from '../../data-constants';
 
-import LinearGradient from 'react-native-linear-gradient';
+import { BackdropType } from '../../types';
 
 export const Backdrop: FC<BackdropType> = ({ films, scrollX }) => {
   return (
