@@ -5,6 +5,7 @@
     "api": "libs/api",
     "constants": "libs/redux/constants",
     "data-constants": "libs/data-constants",
+    "express-api": "apps/express-api",
     "hooks": "libs/hooks",
     "pages-web": "libs/pages-web",
     "react-native-mob": "apps/react-native-mob",
