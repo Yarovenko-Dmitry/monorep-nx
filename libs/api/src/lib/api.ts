@@ -7,13 +7,13 @@ import {configWebData} from '../../../../apps/react-web/envConfig';
 
  // const NX_API_KEY_ROOT = process.env['NX_API_KEY_ROOT']
 
-export const getLatestNews = async (searchQuery: string) => {
+export const getRelatedNews = async (searchQuery: string) => {
   const res = await fetch(`https://hn.algolia.com/api/v1/search?query=${searchQuery}&hitsPerPage=10&page=0`)
   return await res.json()
 }
 
 export const getPopularNews = async () => {
-  const res = await fetch('https://hn.algolia.com/api/v1/search?query=&hitsPerPage=10&page=0')
+  const res = await fetch('https://hn.algolia.com/api/v1/search?hitsPerPage=10&page=0')
   return await res.json()
 }
 

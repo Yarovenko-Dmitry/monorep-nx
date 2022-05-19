@@ -5,8 +5,8 @@ import { Image, StyleSheet } from 'react-native';
 
 import { FilmsScreen } from '../../screens/FilmsScreen';
 import { HomeScreen } from '../../screens/HomeScreen';
-import { LatestNewsScreen } from '../../screens/LatestNewsScreen';
 import { PopularNewsScreen } from '../../screens/PopularNewsScreen';
+import { RelatedNewsScreen } from '../../screens/RelatedNewsScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -33,12 +33,12 @@ export const MyTabs: FC = () => {
       />
 
       <Tab.Screen
-        name='LatestNews'
-        component={LatestNewsScreen}
+        name='RelatedNews'
+        component={RelatedNewsScreen}
         options={{
           tabBarIcon: ({ focused }) => (
             <Image
-              source={require('../../assets/latestNews.png')}
+              source={require('../../assets/relatedNews.png')}
               resizeMode='contain'
               style={{
                 tintColor: focused ? '#28ad0a' : '#e7c08f',

@@ -1,22 +1,22 @@
 import {all, call, fork, put, takeEvery} from 'redux-saga/effects'
 
-import {getLatestNews, getFilms, getPopularNews} from '@monorepo-nx/api'
+import {getRelatedNews, getFilms, getPopularNews} from '@monorepo-nx/api'
 import {GET_FILMS, GET_LATEST_NEWS, GET_POPULAR_NEWS} from '@monorepo-nx/redux/constants'
 import {
   setFilms, setFilmsError,
-  setLatestNews,
-  setLatestNewsError,
+  setRelatedNews,
+  setRelatedNewsError,
   setPopularNews,
   setPopularNewsError
 } from '@monorepo-nx/redux/reducers'
 import {FilmType} from '@monorepo-nx/types'
 
-export function* handleLatestNews() {
+export function* handleRelatedNews() {
   try {
-    const {hits} = yield call(getLatestNews, 'react')
-    yield put(setLatestNews(hits))
+    const {hits} = yield call(getRelatedNews, 'react')
+    yield put(setRelatedNews(hits))
   } catch {
-    yield put(setLatestNewsError('Error fetching latest news'))
+    yield put(setRelatedNewsError('Error fetching latest news'))
   }
 }
 
@@ -41,7 +41,7 @@ export function* handleFilms() {
 }
 
 export function* watchLatestSaga() {
-  yield takeEvery(GET_LATEST_NEWS, handleLatestNews)
+  yield takeEvery(GET_LATEST_NEWS, handleRelatedNews)
 }
 
 export function* watchPopularSaga() {

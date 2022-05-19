@@ -10,7 +10,7 @@ type NavigationItemType = {
 
 const navigation: NavigationItemType[] = [
   {id: 1, title: 'Home', path: '/'},
-  {id: 2, title: 'Latest News', path: '/latest-news'},
+  {id: 2, title: 'Related News', path: '/latest-news'},
   {id: 3, title: 'Popular News', path: '/popular-news'},
 ]
 

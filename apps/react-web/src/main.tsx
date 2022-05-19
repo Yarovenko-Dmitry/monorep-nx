@@ -4,7 +4,7 @@ import {Provider} from 'react-redux'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 import {store} from '@monorepo-nx/redux'
-import {Home, LatestNews, NotfoundPage, PopularNews} from '@monorepo-nx/pages-web'
+import {Home, RelatedNews, NotfoundPage, PopularNews} from '@monorepo-nx/pages-web'
 
 import {App} from './app/app'
 
@@ -25,7 +25,7 @@ ReactDOM.render(
             element = {<Home />} />
           <Route
             path = '/latest-news'
-            element = {<LatestNews />} />
+            element = {<RelatedNews />} />
           <Route
             path = '/popular-news'
             element = {<PopularNews />} />

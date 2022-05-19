@@ -6,8 +6,8 @@ export const HomeNavigation: FC<any> = ({ navigation }) => {
   return (
     <View style={styles.navBar}>
       <Button
-        title='LatestNews'
-        onPress={() => navigation.navigate('LatestNews')}
+        title='RelatedNews'
+        onPress={() => navigation.navigate('RelatedNews')}
       />
       <Button
         title='PopularNews'

@@ -1,5 +1,5 @@
 export type NewsStateType = {
-  latestNews: SingleNewsType[],
+  relatedNews: SingleNewsType[],
   popularNews: SingleNewsType[],
 }
 
@@ -44,7 +44,7 @@ export type SingleNewsType = {
 }
 
 export type ErrorsStateType = {
-  latestNewsError: string
+  relatedNewsError: string
   popularNewsError: string
   filmsError: string
 }

@@ -4,7 +4,7 @@ import {NewsStateType, SingleNewsType} from '@monorepo-nx/types'
 
 
 const initialState: NewsStateType = {
-  latestNews: [],
+  relatedNews: [],
   popularNews: [],
 }
 
@@ -12,8 +12,8 @@ export const newsSlice = createSlice<NewsStateType, SliceCaseReducers<NewsStateT
   name: 'news',
   initialState,
   reducers: {
-    setLatestNews: (state, action: PayloadAction<SingleNewsType[]>): void => {
-      state.latestNews = action.payload
+    setRelatedNews: (state, action: PayloadAction<SingleNewsType[]>): void => {
+      state.relatedNews = action.payload
     },
     setPopularNews: (state, action: PayloadAction<SingleNewsType[]>): void => {
       state.popularNews = action.payload
@@ -21,4 +21,4 @@ export const newsSlice = createSlice<NewsStateType, SliceCaseReducers<NewsStateT
   }
 })
 
-export const {setLatestNews, setPopularNews} = newsSlice.actions
+export const {setRelatedNews, setPopularNews} = newsSlice.actions

@@ -1,7 +1,7 @@
 import {GET_FILMS, GET_LATEST_NEWS, GET_POPULAR_NEWS} from '@monorepo-nx/redux/constants'
 import {ActionCreatorType} from '@monorepo-nx/types'
 
-export const getLatestNewsAC: ActionCreatorType = () => ({
+export const getRelatedNewsAC: ActionCreatorType = () => ({
   type: GET_LATEST_NEWS
 })
 
