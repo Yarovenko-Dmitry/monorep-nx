@@ -2,16 +2,10 @@ export const serverResponse: serverRawResponseType = {
   "page": 1,
   "results": [
     {
+      "id": 675353,
       "adult": false,
       "backdrop_path": "/egoyMDLqCxzjnSrWOz50uLlJWmD.jpg",
-      "genre_ids": [
-        28,
-        878,
-        35,
-        10751,
-        12
-      ],
-      "id": 675353,
+      "genre_ids": [28, 878, 35, 10751, 12],
       "original_language": "en",
       "original_title": "Sonic the Hedgehog 2",
       "overview": "After settling in Green Hills, Sonic is eager to prove he has what it takes to be a true hero. His test comes when Dr. Robotnik returns, this time with a new partner, Knuckles, in search for an emerald that has the power to destroy civilizations. Sonic teams up with his own sidekick, Tails, and together they embark on a globe-trotting journey to find the emerald before it falls into the wrong hands.",
@@ -24,13 +18,13 @@ export const serverResponse: serverRawResponseType = {
       "vote_count": 1347
     },
     {
+      "id": 335787,
       "adult": false,
       "backdrop_path": "/aEGiJJP91HsKVTEPy1HhmN0wRLm.jpg",
       "genre_ids": [
         28,
         12
       ],
-      "id": 335787,
       "original_language": "en",
       "original_title": "Uncharted",
       "overview": "A young street-smart, Nathan Drake and his wisecracking partner Victor “Sully” Sullivan embark on a dangerous pursuit of “the greatest treasure never found” while also tracking clues that may lead to Nathan’s long-lost brother.",
@@ -43,16 +37,10 @@ export const serverResponse: serverRawResponseType = {
       "vote_count": 1916
     },
     {
+      "id": 629542,
       "adult": false,
       "backdrop_path": "/fEe5fe82qHzjO4yej0o79etqsWV.jpg",
-      "genre_ids": [
-        16,
-        35,
-        28,
-        10751,
-        80
-      ],
-      "id": 629542,
+      "genre_ids": [16, 35, 28, 10751, 80],
       "original_language": "en",
       "original_title": "The Bad Guys",
       "overview": "When the infamous Bad Guys are finally caught after years of countless heists and being the world’s most-wanted villains, Mr. Wolf brokers a deal to save them all from prison.",
@@ -65,14 +53,10 @@ export const serverResponse: serverRawResponseType = {
       "vote_count": 394
     },
     {
+      "id": 414906,
       "adult": false,
       "backdrop_path": "/xHrp2pq73oi9D64xigPjWW1wcz1.jpg",
-      "genre_ids": [
-        80,
-        9648,
-        53
-      ],
-      "id": 414906,
+      "genre_ids": [80, 9648, 53],
       "original_language": "en",
       "original_title": "The Batman",
       "overview": "In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.",
@@ -85,14 +69,10 @@ export const serverResponse: serverRawResponseType = {
       "vote_count": 4550
     },
     {
+      "id": 453395,
       "adult": false,
       "backdrop_path": "/AdyJH8kDm8xT8IKTlgpEC15ny4u.jpg",
-      "genre_ids": [
-        14,
-        28,
-        12
-      ],
-      "id": 453395,
+      "genre_ids": [14, 28, 12],
       "original_language": "en",
       "original_title": "Doctor Strange in the Multiverse of Madness",
       "overview": "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
@@ -105,14 +85,10 @@ export const serverResponse: serverRawResponseType = {
       "vote_count": 1521
     },
     {
+      "id": 634649,
       "adult": false,
       "backdrop_path": "/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg",
-      "genre_ids": [
-        28,
-        12,
-        878
-      ],
-      "id": 634649,
+      "genre_ids": [28, 12, 878],
       "original_language": "en",
       "original_title": "Spider-Man: No Way Home",
       "overview": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
@@ -125,13 +101,10 @@ export const serverResponse: serverRawResponseType = {
       "vote_count": 12769
     },
     {
+      "id": 628900,
       "adult": false,
       "backdrop_path": "/figlwUsXXFehX3IebdjqNLV6vWk.jpg",
-      "genre_ids": [
-        28,
-        53
-      ],
-      "id": 628900,
+      "genre_ids": [28, 53],
       "original_language": "en",
       "original_title": "The Contractor",
       "overview": "After being involuntarily discharged from the U.S. Special Forces, James Harper decides to support his family by joining a private contracting organization alongside his best friend and under the command of a fellow veteran. Overseas on a covert mission, Harper must evade those trying to kill him while making his way back home.",
@@ -408,16 +381,16 @@ export const serverResponse: serverRawResponseType = {
 }
 
 export type RawResultType = {
+  id: number,
   adult: boolean,
   backdrop_path: string,
   genre_ids: number[],
-  id: number,
   original_language: string,
   original_title: string,
   overview: string,
   popularity: number,
   poster_path: string,
-  release_date: string,
+  release_date: Date | string,
   title: string,
   video: boolean,
   vote_average: number,
@@ -430,3 +403,20 @@ export type serverRawResponseType = {
   total_pages: number,
   total_results: number,
 }
+
+
+// CREATE TABLE `testhub`.`films` ( `key_id` INT(10) NOT NULL , `adult` TINYINT(1) NOT NULL , `backdrop_path` CHAR(100) NOT NULL , `genre_ids` JSON NOT NULL , `original_language` CHAR(50) NOT NULL , `original_title` CHAR(100) NOT NULL , `overview` VARCHAR(1000) NOT NULL , `popularity` FLOAT(10) NOT NULL , `poster_path` CHAR(100) NOT NULL , `release_date` CHAR(10) NOT NULL , `title` CHAR(100) NOT NULL , `video` TINYINT(1) NOT NULL , `vote_average` FLOAT(10) NOT NULL , `vote_count` INT(10) NOT NULL ) ENGINE = InnoDB;
+
+// INSERT INTO films VALUES (675353, 0, '/egoyMDLqCxzjnSrWOz50uLlJWmD.jpg', '[28, 878, 35, 10751, 12]', 'en', 'Sonic the Hedgehog 2', 'After settling in Green Hills, Sonic is eager to prove he has what it takes to be a true hero. His test comes when Dr. Robotnik returns, this time with a new partner, Knuckles, in search for an emerald that has the power to destroy civilizations. Sonic teams up with his own sidekick, Tails, and together they embark on a globe-trotting journey to find the emerald before it falls into the wrong hands.', 12295.749, '/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg', '2022-03-30', 'Sonic the Hedgehog 2' , 0, 7.7, 1347);
+
+//INSERT INTO films VALUES (335787, 0, '/aEGiJJP91HsKVTEPy1HhmN0wRLm.jpg', '[28, 12]', 'en', 'Uncharted', 'A young street-smart, Nathan Drake and his wisecracking partner Victor “Sully” Sullivan embark on a dangerous pursuit of “the greatest treasure never found” while also tracking clues that may lead to Nathan’s long-lost brother.', 5338.804, '/tlZpSxYuBRoVJBOpUrPdQe9FmFq.jpg', '2022-02-10', 'Uncharted' , 0, 7.2, 1916);
+
+// INSERT INTO films VALUES (629542, 0, '/fEe5fe82qHzjO4yej0o79etqsWV.jpg', '[16, 35, 28, 10751, 80]', 'en', 'The Bad Guys', 'When the infamous Bad Guys are finally caught after years of countless heists and being the world’s most-wanted villains, Mr. Wolf brokers a deal to save them all from prison.', 4730.457, '/7qop80YfuO0BwJa1uXk1DXUUEwv.jpg', '2022-03-17', 'The Bad Guys' , 0, 7.8, 394);
+
+//INSERT INTO films VALUES (414906, 0, '/xHrp2pq73oi9D64xigPjWW1wcz1.jpg', '[80, 9648, 53]', 'en', 'The Batman', 'In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.', 5095.615, '/74xTEgt7R36Fpooo50r9T25onhq.jpg', '2022-03-01', 'The Batman' , 0, 7.8, 4550);
+
+// INSERT INTO films VALUES (453395, 0, '/AdyJH8kDm8xT8IKTlgpEC15ny4u.jpg', '[14, 28, 12]', 'en', 'Doctor Strange in the Multiverse of Madness', 'Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.', 4641.408, '/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg', '2022-05-04', 'Doctor Strange in the Multiverse of Madness' , 0, 7.5, 1521);
+
+// INSERT INTO films VALUES (634649, 0, '/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg', '[28, 12, 878]', 'en', 'Spider-Man: No Way Home', 'Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.', 4160.324, '/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg', '2021-12-15', 'Spider-Man: No Way Home' , 0, 8.1, 12769);
+
+//INSERT INTO films VALUES (628900, 0, '/figlwUsXXFehX3IebdjqNLV6vWk.jpg', '[28, 53]', 'en', 'The Contractor', 'After being involuntarily discharged from the U.S. Special Forces, James Harper decides to support his family by joining a private contracting organization alongside his best friend and under the command of a fellow veteran. Overseas on a covert mission, Harper must evade those trying to kill him while making his way back home.', 3691.191, '/rJPGPZ5soaG27MK90oKpioSiJE2.jpg', '2022-03-10', 'The Contractor' , 0, 6.5, 225);
