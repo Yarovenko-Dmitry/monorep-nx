@@ -12,7 +12,8 @@
     "start": "nx run-android",
     "android": "nx run-android react-native-mob",
     "ios": "nx run-ios react-native-mob",
-    "start-web-add-test": "nx serve react-web-add-test --port 7878"
+    "start-web-add-test": "nx serve react-web-add-test --port 7878",
+    "start-server-web": "nx run-many --target=serve --projects=express-api,react-web --parallel"
   },
   "private": true,
   "dependencies": {
