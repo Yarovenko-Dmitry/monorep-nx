@@ -40,12 +40,20 @@ export const getFilms = (req, res) => {
   const querySrting = 'SELECT * FROM films'
 
   // connection.query(querySrting, (err, result) => {
-  pool.query(querySrting, (err, result) => {
+  pool.query(querySrting, (err, results) => {
     console.log(' err :', err)
+
     if (err) {
       res.status(400).send(err);
     }
-    res.status(200).send(result);
-    console.log(' result :', result)
+
+    const wrappedResult = {
+      // NOTE page, total_pages, total_results - stub data
+      "page": 1,
+      results,
+      "total_pages": 33597,
+      "total_results": 671937
+    }
+    res.status(200).send(wrappedResult);
   })
 }
