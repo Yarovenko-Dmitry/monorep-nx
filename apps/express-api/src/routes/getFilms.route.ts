@@ -37,11 +37,12 @@ const pool = mysql.createPool({
 })*/
 
 export const getFilms = (req, res) => {
-  const querySrting = 'SELECT * FROM films'
+  console.log('path:: /films ');
+  const querySrting = 'SELECT * FROM films';
 
   // connection.query(querySrting, (err, result) => {
   pool.query(querySrting, (err, results) => {
-    console.log(' err :', err)
+    console.log(' err :', err);
 
     if (err) {
       res.status(400).send(err);
