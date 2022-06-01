@@ -10,7 +10,8 @@
         "outputPath": "dist/apps/express-api",
         "main": "apps/express-api/src/main.ts",
         "tsConfig": "apps/express-api/tsconfig.app.json",
-        "assets": ["apps/express-api/src/assets"]
+        "assets": ["apps/express-api/src/assets"],
+        "webpackConfig": ".webpack/express-dev.config.js"
       },
       "configurations": {
         "production": {

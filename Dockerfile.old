@@ -1,0 +1,41 @@
+#FROM - sets the base (parent) image.
+FROM node
+#WORKDIR - sets the working directory for the next instruction.
+# The WORKDIR instruction sets the working directory for all RUN, CMD, ENTRYPOINT, COPY and ADD instructions that will be executed in the Dockerfile. If WORKDIR is not set, then it will be created even if there is not a single instruction in the Dockerfile that requires it.
+#WORKDIR /app
+#COPY - copies files and folders to the container.
+# two arguments separated by a space, the first dot means copy everything from the root, where the Dockerfile is located
+# BUT in this case, the second dot already means not the project root, but / app WORKDIR /app
+COPY. .
+#RUN - executes a command and creates an image layer. Used to install packages into a container.
+RUN yarn install
+#LABEL adds metadata for the image
+#EXPOSE - indicates the need to open the port.
+# The EXPOSE statement tells Docker that the container is listening on certain ports after it is started.
+#ENV - Sets permanent environment variables.
+ENV DOCKER_API_KEY="DOCKER_API_KEY_testing"
+#ENV PORT 3002
+# which port to run
+#EXPOSE 3000 and EXPOSE $PORT are the same. Accessing a variable with $
+#EXPOSE$PORT
+EXPOSE 4567
+#ADD - copies files and folders to a container, can unpack local .tar files.
+
+# ENTRYPOINT - Provides a command with arguments to invoke during container execution. Arguments are not redefined.
+# VOLUME - creates a mount point to work with persistent storage.
+# path in VOLUME must match WORKDIR e.g. ["/test-dir-docker/data"]
+# USER sets the name of the user (UID) under which the image will run, as well as the RUN, CMD and ENTRYPOINT instructions contained in the Dockerfile.
+#ARG - sets variables to pass to Docker during image build.
+# ONBUILD adds a trigger statement to the image that is executed last if the image is used as the base for another build. The trigger will be executed in the child build context, as if the statement were inserted immediately after the FROM statement of the child Dockerfile.
+# STOPSIGNAL sets the system call signal that will be sent to end the container.
+# HEALTHCHECK tells Docker how to check if the container is running. This feature can help detect situations where a web server has entered an infinite loop and is not accepting connections while its process is still running.
+# SHELL allows you to replace the standard shell for executing commands with a custom one.
+#CMD - describes the command with arguments to be executed when the container is started. The arguments can be overridden when the container is started. Only one CMD instruction can be present in a file.
+# The main purpose of CMD is to pass default parameters to run the container.
+#CMD node ./main.js
+
+#CMD ["npx", "serve", "-s", ".", "-l", "3000"] - example
+#CMD ["nx", "run", "express-api:serve"]
+CMD node ./apps/express-api/src/main.js
+
+#CMD ["node", "/apps/express-api/src/main.js"]

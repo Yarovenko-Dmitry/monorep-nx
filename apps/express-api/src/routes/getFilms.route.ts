@@ -46,15 +46,15 @@ export const getFilms = (req, res) => {
 
     if (err) {
       res.status(400).send(err);
+    } else {
+      const wrappedResult = {
+        // NOTE page, total_pages, total_results - stub data
+        "page": 1,
+        results,
+        "total_pages": 33597,
+        "total_results": 671937
+      }
+      res.status(200).send(wrappedResult);
     }
-
-    const wrappedResult = {
-      // NOTE page, total_pages, total_results - stub data
-      "page": 1,
-      results,
-      "total_pages": 33597,
-      "total_results": 671937
-    }
-    res.status(200).send(wrappedResult);
   })
 }

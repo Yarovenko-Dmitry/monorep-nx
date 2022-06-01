@@ -17,8 +17,8 @@ dist
 tmp
 
 # test settings
-apps
-!apps/express-api/
-android
-ios
+#apps
+#!apps/express-api/
+#android
+#ios
 

@@ -1,0 +1,25 @@
+version: '0.8.1'
+
+services:
+  # Express App
+  express-api:
+    extends:
+      file: docker-compose.base.yml
+      service: nx-app-base
+#    command: yarn run express-api:dev:docker
+    command: yarn run express-api:dev:docker
+    ports:
+      - 3002:3333 # API Entry port
+      - 5002:5002 # Server Debugging port
+
+  # React App
+  react-web:
+    extends:
+      file: docker-compose.base.yml
+      service: nx-app-base
+    command: yarn run react-web:dev:docker
+    ports:
+      - 7123:4200
+
+volumes:
+  mono-node-modules: null
