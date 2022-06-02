@@ -1,23 +1,5 @@
 import * as mysql from "mysql2"
 
-// settings for MySQL Workbench
-/*const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  database: "newdb",
-  password: "password_root",
-});*/
-
-// settings for MAMP phpMyAdmin
-// http://localhost:8888/phpMyAdmin5/
-/*const connection = mysql.createConnection({
-  host: 'localhost',
-  port: 8889,
-  user: "root",
-  password: "root",
-  database: "testhub",
-});*/
-
 const pool = mysql.createPool({
   connectionLimit: 10,
   host: 'localhost',
@@ -27,20 +9,9 @@ const pool = mysql.createPool({
   database: 'testhub'
 });
 
-/*connection.connect(err => {
-  if (err) {
-    console.log(' connection.connect err :', err)
-    return err
-  } else {
-    console.log(' data base connected')
-  }
-})*/
-
 export const getFilms = (req, res) => {
-  console.log('path:: /films ');
+  console.log('path MySQL:: /films ');
   const querySrting = 'SELECT * FROM films';
-
-  // connection.query(querySrting, (err, result) => {
   pool.query(querySrting, (err, results) => {
     console.log(' err :', err);
 
@@ -54,6 +25,7 @@ export const getFilms = (req, res) => {
         "total_pages": 33597,
         "total_results": 671937
       }
+
       res.status(200).send(wrappedResult);
     }
   })
