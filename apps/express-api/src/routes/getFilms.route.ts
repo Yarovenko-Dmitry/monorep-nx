@@ -1,12 +1,25 @@
 import * as mysql from "mysql2"
 
+// const port = process.env.port || 3333;
+// DB_CONNECTION=mysql
+// DB_HOST=db
+// DB_PORT=3306
+// DB_DATABASE=dockerdb
+// DB_USERNAME=root
+// DB_PASSWORD=root
+
+
 const pool = mysql.createPool({
   connectionLimit: 10,
   host: 'localhost',
-  port: 8889,
+  // port: 8889,
+  // port: 3306,
+  port: 8101,
+
   user: 'root',
   password: 'root',
-  database: 'testhub'
+  // database: 'testhub'
+  database: 'dockerdb',
 });
 
 export const getFilms = (req, res) => {
@@ -16,7 +29,7 @@ export const getFilms = (req, res) => {
     console.log(' err :', err);
 
     if (err) {
-      res.status(400).send(err);
+      res.status(400).send({error: err});
     } else {
       const wrappedResult = {
         // NOTE page, total_pages, total_results - stub data

@@ -1,4 +1,4 @@
-version: '0.8.1'
+version: '3'
 
 services:
   # Express App
@@ -8,9 +8,11 @@ services:
       service: nx-app-base
 #    command: yarn run express-api:dev:docker
     command: yarn run express-api:dev:docker
+    depends_on:
+      - bd
     ports:
-      - 3002:3333 # API Entry port
-      - 4311:4311 # Server Debugging port
+      - "3002:3333" # API Entry port
+      - "4311:4311" # Server Debugging port
 
   # React App
   react-web:
@@ -19,7 +21,21 @@ services:
       service: nx-app-base
     command: yarn run react-web:dev:docker
     ports:
-      - 4200:4200 # second port must be 4200
+      - "4200:4200" # second port must be 4200
+
+  bd:
+    image: mysql:8.0
+    container_name: mysql8_test
+    restart: always
+    volumes:
+      - ./testDataDB/dbfile:/var/lib/mysql # нужно для хранения значений базы, чтобы докер знал, откуда подтягивать.
+    environment:
+      MYSQL_DATABASE: dockerdb
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "8101:3306"
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+    env_file: .env
 
 volumes:
   mono-node-modules: null

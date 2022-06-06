@@ -420,3 +420,14 @@ export type serverRawResponseType = {
 // INSERT INTO films VALUES (634649, 0, '/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg', '[28, 12, 878]', 'en', 'Spider-Man: No Way Home', 'Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.', 4160.324, '/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg', '2021-12-15', 'Spider-Man: No Way Home' , 0, 8.1, 12769);
 
 //INSERT INTO films VALUES (628900, 0, '/figlwUsXXFehX3IebdjqNLV6vWk.jpg', '[28, 53]', 'en', 'The Contractor', 'After being involuntarily discharged from the U.S. Special Forces, James Harper decides to support his family by joining a private contracting organization alongside his best friend and under the command of a fellow veteran. Overseas on a covert mission, Harper must evade those trying to kill him while making his way back home.', 3691.191, '/rJPGPZ5soaG27MK90oKpioSiJE2.jpg', '2022-03-10', 'The Contractor' , 0, 6.5, 225);
+
+
+
+
+// INSERT INTO films VALUES (675353, 0, '/egoyMDLqCxzjnSrWOz50uLlJWmD.jpg', '[28, 878, 35, 10751, 12]', 'en', 'WORKbench Sonic the Hedgehog 2', 'After settling in Green Hills, Sonic is eager to prove he has what it takes to be a true hero. His test comes when Dr. Robotnik returns, this time with a new partner, Knuckles, in search for an emerald that has the power to destroy civilizations. Sonic teams up with his own sidekick, Tails, and together they embark on a globe-trotting journey to find the emerald before it falls into the wrong hands.', 12295.749, '/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg', '2022-03-30', 'Sonic the Hedgehog 2' , 0, 7.7, 1347);
+
+// INSERT INTO films VALUES (335787, 0, '/aEGiJJP91HsKVTEPy1HhmN0wRLm.jpg', '[28, 12]', 'en', 'WORKbench Uncharted', 'A young street-smart, Nathan Drake and his wisecracking partner Victor “Sully” Sullivan embark on a dangerous pursuit of “the greatest treasure never found” while also tracking clues that may lead to Nathan’s long-lost brother.', 5338.804, '/tlZpSxYuBRoVJBOpUrPdQe9FmFq.jpg', '2022-02-10', 'Uncharted' , 0, 7.2, 1916);
+
+// INSERT INTO films VALUES (629542, 0, '/fEe5fe82qHzjO4yej0o79etqsWV.jpg', '[16, 35, 28, 10751, 80]', 'en', 'WORKbench The Bad Guys', 'When the infamous Bad Guys are finally caught after years of countless heists and being the world’s most-wanted villains, Mr. Wolf brokers a deal to save them all from prison.', 4730.457, '/7qop80YfuO0BwJa1uXk1DXUUEwv.jpg', '2022-03-17', 'The Bad Guys' , 0, 7.8, 394);
+
+//INSERT INTO films VALUES (414906, 0, '/xHrp2pq73oi9D64xigPjWW1wcz1.jpg', '[80, 9648, 53]', 'en', 'WORKbench The Batman', 'In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.', 5095.615, '/74xTEgt7R36Fpooo50r9T25onhq.jpg', '2022-03-01', 'The Batman' , 0, 7.8, 4550);
